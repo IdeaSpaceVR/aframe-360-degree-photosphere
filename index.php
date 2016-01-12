@@ -28,7 +28,7 @@
 </head>
 <body>
 
-  <a href="" class="view-source">View source</a>
+  <a href="https://github.com/IdeaSpaceVR/aframe-360-degree-photosphere/blob/master/index.php" class="view-source">View source</a>
 
   <a-scene>
  
