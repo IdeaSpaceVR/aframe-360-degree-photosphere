@@ -1,4 +1,7 @@
-# aframe-360-degree-photosphere
+# a-frame 360-degree photosphere viewer
+
+![alt text](https://raw.githubusercontent.com/IdeaSpaceVR/aframe-360-degree-photosphere/master/images/aframe-360-degree-photosphere-viewer.png "aframe-360-degree-photosphere")
+
 A simple 360-degree photosphere example (incl. a photo menu) implemented in aframe.
 
 ### Instructions:
