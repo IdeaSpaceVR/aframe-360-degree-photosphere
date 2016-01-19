@@ -14,8 +14,8 @@
       document.querySelector('#photosphere-menu').setAttribute('visible', false);  
       document.querySelector('#cursor').setAttribute('visible', false);
 
-      var src = this.el.getAttribute('src');
-      document.querySelector('#photosphere').setAttribute('src', src.substr(0, src.length - 10) + '.jpg');      
+      var id = this.el.getAttribute('id');
+      document.querySelector('#photosphere').setAttribute('material', {src: id.substr(0, id.length - 6)});
 
     },
 

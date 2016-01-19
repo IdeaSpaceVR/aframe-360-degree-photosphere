@@ -8,9 +8,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <script src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/js/aframe.min.js"></script>
-  <script src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/js/components/isvr_photosphere_menu.js"></script>
-  <script src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/js/components/isvr_photosphere_menu_thumb.js"></script>
+  <script src="js/aframe.min.js"></script>
+  <script src="js/components/isvr_photosphere_menu.js"></script>
+  <script src="js/components/isvr_photosphere_menu_thumb.js"></script>
 
   <style>
   .view-source {
@@ -33,6 +33,12 @@
 
   <a href="https://github.com/IdeaSpaceVR/aframe-360-degree-photosphere/blob/master/index.php" class="view-source">View source</a>
 
+  <a-assets>
+    <img src="images/005.jpg" id="img-photosphere-005">
+    <img src="images/006.jpg" id="img-photosphere-006">
+    <img src="images/010.jpg" id="img-photosphere-010">
+  </a-assets>
+
   <a-scene>
  
     <a-entity position="0 1.8 5">
@@ -51,21 +57,31 @@
     </a-entity>
 
     <a-entity isvr-photosphere-menu id="photosphere-menu" visible="false"> 
-      <a-image isvr-photosphere-menu-thumb id="#photosphere-menu-thumb-1" src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/images/010-thumb.jpg" width="2" height="1" position="0 -1.1 0">
+      <a-image isvr-photosphere-menu-thumb id="#img-photosphere-010-thumb" src="images/010-thumb.jpg" width="2" height="1" position="0 -1.1 0">
         <a-animation attribute="position" begin="mouseenter" from="0 -1.1 0" to="0 -1.1 0.5"></a-animation>
         <a-animation attribute="position" begin="mouseleave" from="0 -1.1 0.5" to="0 -1.1 0"></a-animation>
       </a-image>
-      <a-image isvr-photosphere-menu-thumb id="#photosphere-menu-thumb-2" src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/images/006-thumb.jpg" width="2" height="1" position="0 0 0">
+      <a-image isvr-photosphere-menu-thumb id="#img-photosphere-006-thumb" src="images/006-thumb.jpg" width="2" height="1" position="0 0 0">
         <a-animation attribute="position" begin="mouseenter" from="0 0 0" to="0 0 0.5"></a-animation>
         <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 0"></a-animation>
       </a-image>
-      <a-image isvr-photosphere-menu-thumb id="#photosphere-menu-thumb-3" src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/images/005-thumb.jpg" width="2" height="1" position="0 1.1 0">
+      <a-image isvr-photosphere-menu-thumb id="#img-photosphere-005-thumb" src="images/005-thumb.jpg" width="2" height="1" position="0 1.1 0">
         <a-animation attribute="position" begin="mouseenter" from="0 1.1 0" to="0 1.1 0.5"></a-animation>
         <a-animation attribute="position" begin="mouseleave" from="0 1.1 0.5" to="0 1.1 0"></a-animation>
       </a-image>
     </a-entity> 
 
-    <a-sky id="photosphere" src="https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere/images/005.jpg" rotation="0 -60 0" radius="5000" color="#FFFFFF"></a-sky>
+    <a-entity geometry="primitive: sphere;
+                    radius: 5000;
+                    segmentsWidth: 64;
+                    segmentsHeight: 64"
+          material="shader: flat;
+                    src: #img-photosphere-005;
+                    color: #fff;
+                    fog: false"
+          scale="-1 1 1"
+          rotation="0 -60 0" id="photosphere">
+    </a-entity>
 
   </a-scene>
 
