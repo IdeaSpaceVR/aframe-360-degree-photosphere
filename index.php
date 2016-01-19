@@ -24,6 +24,9 @@
     padding: 9px;
     font-family: Arial, sans-serif;
   }
+  .view-source:fullscreen {
+    display: none;
+  }
   </style>
 </head>
 <body>
