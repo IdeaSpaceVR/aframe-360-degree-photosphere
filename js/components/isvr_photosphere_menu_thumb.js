@@ -11,7 +11,7 @@
 
     onClick: function() {
 
-      if(this.el.parentEl.getAttribute('visible')){
+      if (this.el.parentEl.getAttribute('visible')) {
 
         document.querySelector('#photosphere-menu').setAttribute('visible', false);
         document.querySelector('#cursor').setAttribute('visible', false);
