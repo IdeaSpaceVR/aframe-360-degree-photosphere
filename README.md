@@ -1,23 +1,28 @@
-# a-frame 360-degree photosphere viewer
+# 360-Degree Photosphere Viewer with menu
 
 ![alt text](https://raw.githubusercontent.com/IdeaSpaceVR/aframe-360-degree-photosphere/master/images/aframe-360-degree-photosphere-viewer.png "aframe-360-degree-photosphere")
 
-A simple 360-degree photosphere example (incl. a photo menu) implemented in aframe.
+### Support:
 
-### Instructions:
+- Smartphone: Works best with Google Cardboard v2 (with button) on iPhone and Android devices using a standard Chrome web browser.
+- Desktop PC: Oculus Rift with Firefox Nightly web browser or Google Chrome web browser (special WebVR build).
+- Desktop PC: HTC Vive? (sorry, untested).
 
-- Press SPACE bar on your keyboard for showing and hiding the photo menu.
-- Gaze at a photo and click your mouse button to select a photo from the menu.
-
-### Example:
+### Live Example:
 
 - https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere
 
-### Support:
+### Instructions for Desktop PC (Oculus Rift / HTC Vive):
 
-- Oculus Rift
-- Google Cardboard for iPhone and Android Phone (coming soon)
+- Press SPACE bar on your keyboard to access the photo menu.
+- Gaze at a photo and click your mouse button to select a photo.
+
+### Instructions for Smartphone (Google Cardboard v2):
+
+- Press the Cardboard button to access the photo menu.
+- Gaze at a photo and press the Cardboard button to select a photo.
 
 ### Credits:
+
 - https://aframe.io
 - Photo license: https://creativecommons.org/licenses/by/2.0/
