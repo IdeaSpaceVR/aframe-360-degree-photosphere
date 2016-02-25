@@ -1,4 +1,4 @@
-# 360-Degree Photosphere Viewer with menu
+# 360-Degree Photosphere Viewer with Navigation Menu
 
 ![alt text](https://raw.githubusercontent.com/IdeaSpaceVR/aframe-360-degree-photosphere/master/images/aframe-360-degree-photosphere-viewer.png "aframe-360-degree-photosphere")
 
