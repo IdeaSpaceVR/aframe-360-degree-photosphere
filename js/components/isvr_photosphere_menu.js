@@ -39,12 +39,7 @@
 
     handleMenu: function() {
 
-      if (this.el.getAttribute('visible') == true) {
-
-        this.el.setAttribute('visible', false);
-        document.querySelector('#cursor').setAttribute('visible', false);
-
-      } else {
+      if (this.el.getAttribute('visible') == false) {
 
         var direction = this.zaxis.clone();
         direction.applyQuaternion(this.el.sceneEl.cameraEl.object3D.quaternion);

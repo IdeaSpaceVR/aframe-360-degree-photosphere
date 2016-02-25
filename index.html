@@ -12,26 +12,8 @@
   <script src="js/components/isvr_photosphere_menu.js"></script>
   <script src="js/components/isvr_photosphere_menu_thumb.js"></script>
 
-  <style>
-  .view-source {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    z-index: 999999;
-    background-color: rgba(102, 102, 102, 0.5);
-    color: #FFF;
-    margin-right: 10px;
-    padding: 9px;
-    font-family: Arial, sans-serif;
-  }
-  .view-source:fullscreen {
-    display: none;
-  }
-  </style>
 </head>
 <body>
-
-  <a href="https://github.com/IdeaSpaceVR/aframe-360-degree-photosphere/blob/master/index.php" class="view-source">View source</a>
 
   <a-assets>
     <img src="images/005.jpg" id="img-photosphere-005">
@@ -48,7 +30,7 @@
         <a-entity
         cursor="fuse: false; maxDistance: 500; timeout: 3000;"
         id="cursor" 
-        position="0 0 -3.5"
+        position="0 0 -3.4"
         geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
         material="color: red; shader: flat;"
         visible="false">
@@ -57,15 +39,15 @@
     </a-entity>
 
     <a-entity isvr-photosphere-menu id="photosphere-menu" visible="false"> 
-      <a-image isvr-photosphere-menu-thumb id="#img-photosphere-010-thumb" src="images/010-thumb.jpg" width="2" height="1" position="0 -1.1 0">
+      <a-image isvr-photosphere-menu-thumb id="img-photosphere-010-thumb" src="images/010-thumb.jpg" width="2" height="1" position="0 -1.1 0">
         <a-animation attribute="position" begin="mouseenter" from="0 -1.1 0" to="0 -1.1 0.5"></a-animation>
         <a-animation attribute="position" begin="mouseleave" from="0 -1.1 0.5" to="0 -1.1 0"></a-animation>
       </a-image>
-      <a-image isvr-photosphere-menu-thumb id="#img-photosphere-006-thumb" src="images/006-thumb.jpg" width="2" height="1" position="0 0 0">
+      <a-image isvr-photosphere-menu-thumb id="img-photosphere-006-thumb" src="images/006-thumb.jpg" width="2" height="1" position="0 0 0">
         <a-animation attribute="position" begin="mouseenter" from="0 0 0" to="0 0 0.5"></a-animation>
         <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 0"></a-animation>
       </a-image>
-      <a-image isvr-photosphere-menu-thumb id="#img-photosphere-005-thumb" src="images/005-thumb.jpg" width="2" height="1" position="0 1.1 0">
+      <a-image isvr-photosphere-menu-thumb id="img-photosphere-005-thumb" src="images/005-thumb.jpg" width="2" height="1" position="0 1.1 0">
         <a-animation attribute="position" begin="mouseenter" from="0 1.1 0" to="0 1.1 0.5"></a-animation>
         <a-animation attribute="position" begin="mouseleave" from="0 1.1 0.5" to="0 1.1 0"></a-animation>
       </a-image>
@@ -80,7 +62,7 @@
                     color: #fff;
                     fog: false"
           scale="-1 1 1"
-          rotation="0 -60 0" id="photosphere">
+          rotation="0 0 0" id="photosphere">
     </a-entity>
 
   </a-scene>

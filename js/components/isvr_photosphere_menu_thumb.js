@@ -5,20 +5,27 @@
     init: function() {
 
       this.el.addEventListener('click', this.onClick.bind(this));
-      this.el.addEventListener('touchstart', this.onClick.bind(this));
-
+      
     },
 
-    onClick: function() {
+    onClick: function(evt) {
 
-      if (this.el.parentEl.getAttribute('visible')) {
+      var position = this.el.getAttribute('position');
 
-        document.querySelector('#photosphere-menu').setAttribute('visible', false);
-        document.querySelector('#cursor').setAttribute('visible', false);
-
+      /* prevent immediate selection of image after menu appears */
+      if (this.el.parentEl.getAttribute('visible') && position.z == 0.5) {
+      
         var id = this.el.getAttribute('id');
-        document.querySelector('#photosphere').setAttribute('material', {src: id.substr(0, id.length - 6)});
+        id = '#' + id.substr(0, id.length - 6);
 
+        /* keep menu if material is the same */
+        if (document.querySelector('#photosphere').getAttribute('material').src != id) {
+
+          document.querySelector('#photosphere-menu').setAttribute('visible', false);
+          document.querySelector('#cursor').setAttribute('visible', false);
+          document.querySelector('#photosphere').setAttribute('material', {src: id});
+
+        }
       }
 
     },
