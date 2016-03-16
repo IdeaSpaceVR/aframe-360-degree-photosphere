@@ -8,7 +8,7 @@
 - Desktop PC: Oculus Rift with Firefox Nightly web browser or Google Chrome web browser (special WebVR build).
 - Desktop PC: HTC Vive? (sorry, untested).
 
-### Live Example (implemented in IdeaSpaceVR CMS using JSON endpoints):
+### Live Example (impl. with IdeaSpaceVR CMS using dynamic image loading via JSON):
 
 - https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images 
 
