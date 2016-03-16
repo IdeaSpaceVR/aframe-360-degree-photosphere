@@ -1,71 +1,100 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>360-degree photosphere</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>WebVR Photosphere Viewer</title>
 
-  <script src="js/aframe.min.js"></script>
-  <script src="js/components/isvr_photosphere_menu.js"></script>
-  <script src="js/components/isvr_photosphere_menu_thumb.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Fullscreen Landscape on iOS -->
 
+    <meta name="abstract" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="copyright" content="" />
+    <meta name="robots" content="follow, index" />
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:image:secure_url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:title" content="WebVR Photosphere Viewer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+
+    <script src="js/aframe.min.js"></script>
+    <script src="js/components/isvr_photosphere_menu.js"></script>
+    <script src="js/components/isvr_photosphere_menu_thumb.js"></script>
+    <script src="js/components/isvr_photosphere_menu_navigation.js"></script>
 </head>
 <body>
 
-  <a-assets>
-    <img src="images/005.jpg" id="img-photosphere-005">
-    <img src="images/006.jpg" id="img-photosphere-006">
-    <img src="images/010.jpg" id="img-photosphere-010">
-  </a-assets>
+    <a-scene>
 
-  <a-scene>
- 
-    <a-entity position="0 1.8 5">
-      <a-entity 
-      camera="far: 10000; fov: 80; near: 0.5;" 
-      look-controls="enabled: true"> 
-        <a-entity
-        cursor="fuse: false; maxDistance: 500; timeout: 3000;"
-        id="cursor" 
-        position="0 0 -3.4"
-        geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
-        material="color: red; shader: flat;"
-        visible="false">
+        <a-assets>
+            <img src="images/MwzIg49kqdIsVsPLHlklHnETbxnhk5j2brGjs5XNnN1ZehJeh4mm36eQLARQ.jpg" id="img-photosphere-1">
+            <img src="images/MwzIg49kqdIsVsPLHlklHnETbxnhk5j2brGjs5XNnN1ZehJeh4mm36eQLARQ_thumb.jpg" id="img-photosphere-1-thumb">
+            <img src="images/tXP1XaC9ShZL5s8bIY001NygnKSJrUofLCkJUlurOzB8El5YDEi7p34cFlxz.jpg" id="img-photosphere-2">
+            <img src="images/tXP1XaC9ShZL5s8bIY001NygnKSJrUofLCkJUlurOzB8El5YDEi7p34cFlxz_thumb.jpg" id="img-photosphere-2-thumb">
+            <img src="images/HlwFJ3VKh2Vt7aA5rLWyxrjFQuOzYOMHcC8vOWef36C8M81RM06EBPMelHh0.jpg" id="img-photosphere-3">
+            <img src="images/HlwFJ3VKh2Vt7aA5rLWyxrjFQuOzYOMHcC8vOWef36C8M81RM06EBPMelHh0_thumb.jpg" id="img-photosphere-3-thumb">
+        </a-assets>
+
+
+        <a-entity position="0 1.8 5">
+            <a-entity
+                id="camera" 
+                camera="far: 10000; fov: 80; near: 0.5;"
+                look-controls="enabled: true">
+                <a-entity
+                    cursor="fuse: false; maxDistance: 500; timeout: 3000;"
+                    id="cursor"
+                    position="0 0 -3.4"
+                    geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
+                    material="color: red; shader: flat;"
+                    visible="false">
+                </a-entity>
+            </a-entity>
         </a-entity>
-      </a-entity>
-    </a-entity>
 
-    <a-entity isvr-photosphere-menu id="photosphere-menu" visible="false"> 
-      <a-image isvr-photosphere-menu-thumb id="img-photosphere-010-thumb" src="images/010-thumb.jpg" width="2" height="1" position="0 -1.1 0">
-        <a-animation attribute="position" begin="mouseenter" from="0 -1.1 0" to="0 -1.1 0.5"></a-animation>
-        <a-animation attribute="position" begin="mouseleave" from="0 -1.1 0.5" to="0 -1.1 0"></a-animation>
-      </a-image>
-      <a-image isvr-photosphere-menu-thumb id="img-photosphere-006-thumb" src="images/006-thumb.jpg" width="2" height="1" position="0 0 0">
-        <a-animation attribute="position" begin="mouseenter" from="0 0 0" to="0 0 0.5"></a-animation>
-        <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 0"></a-animation>
-      </a-image>
-      <a-image isvr-photosphere-menu-thumb id="img-photosphere-005-thumb" src="images/005-thumb.jpg" width="2" height="1" position="0 1.1 0">
-        <a-animation attribute="position" begin="mouseenter" from="0 1.1 0" to="0 1.1 0.5"></a-animation>
-        <a-animation attribute="position" begin="mouseleave" from="0 1.1 0.5" to="0 1.1 0"></a-animation>
-      </a-image>
-    </a-entity> 
+         
+        <a-entity data-current-page="1" isvr-photosphere-menu id="photosphere-menu" visible="false">
+            <a-entity isvr-photosphere-menu-navigation id="menu-arrow-up" position="0 1.5 0" visible="false">
+                <a-plane position="-0.07 0 0" rotation="0 0 -45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
+                <a-plane position="0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
+            </a-entity>
+                         
+            <a-image data-image-id="1" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-1-thumb" width="2" height="0.7" position="0 0.8 0">
+                <a-animation attribute="position" begin="mouseenter" from="0 0.8 0" to="0 0.8 0.5" dur="400"></a-animation>
+                <a-animation attribute="position" begin="mouseleave" from="0 0.8 0.5" to="0 0.8 0" dur="400"></a-animation>
+                <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
+            </a-image>
+                         
+            <a-image data-image-id="2" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-2-thumb" width="2" height="0.7" position="0 0 0">
+                <a-animation attribute="position" begin="mouseenter" from="0 0 0" to="0 0 0.5" dur="400"></a-animation>
+                <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 0" dur="400"></a-animation>
+                <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
+            </a-image>
+                         
+            <a-image data-image-id="3" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-3-thumb" width="2" height="0.7" position="0 -0.8 0">
+                <a-animation attribute="position" begin="mouseenter" from="0 -0.8 0" to="0 -0.8 0.5" dur="400"></a-animation>
+                <a-animation attribute="position" begin="mouseleave" from="0 -0.8 0.5" to="0 -0.8 0" dur="400"></a-animation>
+                <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
+            </a-image>
+                         
+            <a-entity isvr-photosphere-menu-navigation="url:https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images/field-data?key=images_upload&chunk-size=3&page=2" id="menu-arrow-down" position="0 -1.5 0" visible=" true ">
+                <a-plane position="-0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
+                <a-plane position="0.07 0 0" rotation="0 0 -45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
+            </a-entity>
+        </a-entity>
+        
+        <a-entity 
+            geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64"
+            material="shader:flat;color:#ffffff;fog:false; src:#img-photosphere-1 "
+            scale="-1 1 1"
+            rotation="0 -60 0" id="photosphere">
+        </a-entity>
 
-    <a-entity geometry="primitive: sphere;
-                    radius: 5000;
-                    segmentsWidth: 64;
-                    segmentsHeight: 64"
-          material="shader: flat;
-                    src: #img-photosphere-005;
-                    color: #fff;
-                    fog: false"
-          scale="-1 1 1"
-          rotation="0 0 0" id="photosphere">
-    </a-entity>
-
-  </a-scene>
+    </a-scene>
 
 </body>
 </html>

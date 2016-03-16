@@ -1,4 +1,4 @@
-# 360-Degree Photosphere Viewer with Navigation Menu
+# WebVR Photosphere Viewer with Navigation Menu
 
 ![alt text](https://raw.githubusercontent.com/IdeaSpaceVR/aframe-360-degree-photosphere/master/images/aframe-360-degree-photosphere-viewer.png "aframe-360-degree-photosphere")
 
@@ -8,9 +8,9 @@
 - Desktop PC: Oculus Rift with Firefox Nightly web browser or Google Chrome web browser (special WebVR build).
 - Desktop PC: HTC Vive? (sorry, untested).
 
-### Live Example:
+### Live Example (implemented in IdeaSpaceVR Content Management System using JSON endpoints):
 
-- https://www.ideaspacevr.org/examples/aframe/aframe-360-degree-photosphere
+- https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images 
 
 ### Instructions for Desktop PC (Oculus Rift / HTC Vive):
 
@@ -22,7 +22,13 @@
 - Press the Cardboard button to access the photo menu.
 - Gaze at a photo and press the Cardboard button to select a photo.
 
+### Development:
+
+- In order to dynamically load images, you need to set the url parameter of the isvr-photosphere-menu-navigation component to a JSON endpoint (paginated):
+
+`isvr-photosphere-menu-navigation="url:https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images/field-data?key=images_upload&chunk-size=3&page=2"`
+
 ### Credits:
 
-- https://aframe.io
-- Photo license: https://creativecommons.org/licenses/by/2.0/
+- A-Frame: https://aframe.io
+- Photo licenses: https://creativecommons.org/licenses/by/2.0/

@@ -1,6 +1,4 @@
-(function() {
-
-  var isvr_photosphere_menu_thumb = {
+AFRAME.registerComponent('isvr-photosphere-menu-thumb', {
 
     init: function() {
 
@@ -14,16 +12,16 @@
 
       /* prevent immediate selection of image after menu appears */
       if (this.el.parentEl.getAttribute('visible') && position.z == 0.5) {
-      
-        var id = this.el.getAttribute('id');
-        id = '#' + id.substr(0, id.length - 6);
+
+        var id = this.el.getAttribute('data-image-id');
+        id = '#img-photosphere-' + id;
 
         /* keep menu if material is the same */
         if (document.querySelector('#photosphere').getAttribute('material').src != id) {
 
           document.querySelector('#photosphere-menu').setAttribute('visible', false);
           document.querySelector('#cursor').setAttribute('visible', false);
-          document.querySelector('#photosphere').setAttribute('material', {src: id});
+          document.querySelector('#photosphere').setAttribute('material', 'src', id);
 
         }
       }
@@ -36,8 +34,4 @@
     remove: function() {
     }
 
-  };
-
-  AFRAME.aframeCore.registerComponent('isvr-photosphere-menu-thumb', isvr_photosphere_menu_thumb);
-
-})();
+});
