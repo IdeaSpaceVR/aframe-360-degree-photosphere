@@ -28,6 +28,10 @@
 
 `isvr-photosphere-menu-navigation="url:https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images/field-data?key=images_upload&chunk-size=3&page=2"`
 
+### IdeaSpace Open Source Content Management System
+
+- This photosphere viewer is a standard theme of the <a href="https://github.com/IdeaSpaceVR/IdeaSpace">IdeaSpace CMS on Github</a>. 
+
 ### Credits:
 
 - A-Frame: https://aframe.io
