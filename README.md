@@ -10,7 +10,7 @@
 
 ### Live Example (impl. with IdeaSpaceVR CMS using dynamic image loading via JSON):
 
-- https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images 
+- https://www.ideaspacevr.org/themes/webvr-photosphere-viewer-equirectangular-images
 
 ### Instructions for Desktop PC (Oculus Rift / HTC Vive):
 
