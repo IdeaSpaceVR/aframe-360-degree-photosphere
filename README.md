@@ -10,10 +10,6 @@
 - Desktop PC: Oculus Rift with Firefox Nightly web browser or Google Chrome web browser (special WebVR build).
 - Desktop PC: HTC Vive? (sorry, untested).
 
-### Live Example (impl. with IdeaSpaceVR CMS using dynamic image loading via JSON):
-
-- https://www.ideaspacevr.org/themes/web-vr-photo-sphere-viewer-navigation-menu
-
 ### Instructions for Desktop PC (Oculus Rift / HTC Vive):
 
 - Press SPACE bar on your keyboard to access the photo menu.
