@@ -1,4 +1,6 @@
-# WebVR Photosphere Viewer with Navigation Menu
+# WebVR Photosphere Viewer with Navigation Menu (deprecated)
+
+## This theme is deprecated. Find the new one here: https://github.com/IdeaSpaceVR/IdeaSpace-360
 
 ![alt text](https://raw.githubusercontent.com/IdeaSpaceVR/aframe-360-degree-photosphere/master/images/aframe-360-degree-photosphere-viewer.png "aframe-360-degree-photosphere")
 
